@@ -1,0 +1,5 @@
+pip install -r InternetArchiveAPI/python/requirements.txt
+cd InternetArchiveAPI/python
+python run.py
+
+
