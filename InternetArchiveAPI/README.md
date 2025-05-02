@@ -231,18 +231,17 @@ npm start
 
 # Front End Images
 
+## Initial Page
 ![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/1_Initial_Explore_Page.png)
 
+## Initial Page Pagination Footer
+![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/2_Initial_Explore_Page_Pagination.png)
 
-![Texto alternativo](URL-da-imagem)
+## Collection Video Navgate
+![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/3_Collection_Video_Navgate.png)
 
+## Video Detailed PopUp
+![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/4_Video_Detailed_Popup.png)
 
-![Texto alternativo](URL-da-imagem)
-
-
-![Texto alternativo](URL-da-imagem)
-
-
-![Texto alternativo](URL-da-imagem)
 
 
