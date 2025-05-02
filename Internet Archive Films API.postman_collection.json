@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "12058acc-c942-4416-ade9-f623fb54212f",
+		"name": "Internet Archive Films API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1952408"
+	},
+	"item": [
+		{
+			"name": "Example_Fuze",
+			"item": [
+				{
+					"name": "Explore (movies)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://archive.org/advancedsearch.php?page=1&output=json&fl=identifier,title,description&sort=stars+desc&q=collection:(movies) AND mediatype:(collection)&rows=100",
+							"protocol": "https",
+							"host": [
+								"archive",
+								"org"
+							],
+							"path": [
+								"advancedsearch.php"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "output",
+									"value": "json"
+								},
+								{
+									"key": "callback",
+									"value": "callback",
+									"disabled": true
+								},
+								{
+									"key": "save",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "mediatype",
+									"value": "collection",
+									"disabled": true
+								},
+								{
+									"key": "fl",
+									"value": "identifier,title,description"
+								},
+								{
+									"key": "sort",
+									"value": "stars+desc"
+								},
+								{
+									"key": "q",
+									"value": "collection:(movies) AND mediatype:(collection)"
+								},
+								{
+									"key": "rows",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Explore (feature_films)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://archive.org/advancedsearch.php?rows=10&page=1&output=json&q=collection:(feature_films) AND mediatype:(collection)&fl=identifier,title,description&sort=stars+desc",
+							"protocol": "https",
+							"host": [
+								"archive",
+								"org"
+							],
+							"path": [
+								"advancedsearch.php"
+							],
+							"query": [
+								{
+									"key": "rows",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "output",
+									"value": "json"
+								},
+								{
+									"key": "callback",
+									"value": "callback",
+									"disabled": true
+								},
+								{
+									"key": "save",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "mediatype",
+									"value": "collection",
+									"disabled": true
+								},
+								{
+									"key": "q",
+									"value": "collection:(feature_films) AND mediatype:(collection)"
+								},
+								{
+									"key": "fl",
+									"value": "identifier,title,description"
+								},
+								{
+									"key": "sort",
+									"value": "stars+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Row Items",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://archive.org/advancedsearch.php?rows=10&page=1&output=json&q=collection:(silent_films) AND mediatype:(movies)&fl=identifier,title,description&sort=stars+desc",
+							"protocol": "https",
+							"host": [
+								"archive",
+								"org"
+							],
+							"path": [
+								"advancedsearch.php"
+							],
+							"query": [
+								{
+									"key": "rows",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "output",
+									"value": "json"
+								},
+								{
+									"key": "callback",
+									"value": "callback",
+									"disabled": true
+								},
+								{
+									"key": "save",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "mediatype",
+									"value": "collection",
+									"disabled": true
+								},
+								{
+									"key": "q",
+									"value": "collection:(silent_films) AND mediatype:(movies)"
+								},
+								{
+									"key": "fl",
+									"value": "identifier,title,description"
+								},
+								{
+									"key": "sort",
+									"value": "stars+desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Thumb From Video",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://archive.org/download/TheVagabond1916/TheVagabond1916.thumbs/The-Vagabond-v2_000001.jpg",
+							"protocol": "https",
+							"host": [
+								"archive",
+								"org"
+							],
+							"path": [
+								"download",
+								"TheVagabond1916",
+								"TheVagabond1916.thumbs",
+								"The-Vagabond-v2_000001.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1 - Explore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/explore?collection=*&page=1&rows=10&sort=stars desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"explore"
+					],
+					"query": [
+						{
+							"key": "collection",
+							"value": "*"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "rows",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "stars desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 - Get Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collections/TV-FOXNEWSW?film_rows=5&page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collections",
+						"TV-FOXNEWSW"
+					],
+					"query": [
+						{
+							"key": "film_rows",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 - Get Itens By Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/collections/TV-FOXNEWSW/items?page=1&rows=10&sort=stars desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"collections",
+						"TV-FOXNEWSW",
+						"items"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "rows",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "stars desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 - Get Detailed Video",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/videos/TV-FOXNEWSW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"videos",
+						"TV-FOXNEWSW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 - API Documentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
