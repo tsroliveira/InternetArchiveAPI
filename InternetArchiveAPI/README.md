@@ -231,7 +231,7 @@ npm start
 
 # Front End Images
 
-![Texto alternativo]([URL-da-imagem](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/1_Initial_Explore_Page.png))
+![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/1_Initial_Explore_Page.png)
 
 
 ![Texto alternativo](URL-da-imagem)
