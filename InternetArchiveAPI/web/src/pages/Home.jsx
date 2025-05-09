@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery';
 import { getCollections } from '../services/api';
 import HomeIcon from '@mui/icons-material/Home';
 import VideoLibrary from '@mui/icons-material/VideoLibrary';
+import useDebounce from '../hooks/useDebounce';
 
 const Home = () => {
   const [collections, setCollections] = useState([]);
@@ -18,6 +19,9 @@ const Home = () => {
   });
   const navigate = useNavigate();
 
+  // Implementando o debounce no filtro de collection
+  const debouncedCollection = useDebounce(filters.collection, 2000); // 500ms de delay
+
   // Memoize the loading function to avoid recreation
   const loadCollections = useCallback(async () => {
     try {
@@ -25,8 +29,8 @@ const Home = () => {
       setError(null);
       setCollections([]); // Clear collections to avoid flash of old content
       
-      console.log(`Fetching collections: page=${page}, collection=${filters.collection}, sort=${filters.sort}`);
-      const data = await getCollections(page, filters.collection, filters.sort);
+      console.log(`Fetching collections: page=${page}, collection=${debouncedCollection}, sort=${filters.sort}`);
+      const data = await getCollections(page, debouncedCollection, filters.sort);
       
       if (data && data.docs) {
         setCollections(data.docs);
@@ -43,7 +47,7 @@ const Home = () => {
     } finally {
       setLoading(false);
     }
-  }, [page, filters.collection, filters.sort]);
+  }, [page, debouncedCollection, filters.sort]);
 
   // Single useEffect with correct dependencies
   useEffect(() => {

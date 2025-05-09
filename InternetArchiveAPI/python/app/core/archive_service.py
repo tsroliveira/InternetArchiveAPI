@@ -25,7 +25,7 @@ class ArchiveService:
     
     def search_collections(self, 
                         collection: str = "*", 
-                        mediatype: str = "movies", 
+                        mediatype: str = "*", 
                         page: int = 1, 
                         rows: int = 10, 
                         sort: str = "stars desc") -> Dict[str, Any]:
