@@ -1,6 +1,6 @@
 # Internet Archive Video API Facade
 
-This project provides a RESTful API facade for accessing video content from the Internet Archive. It's built using Python and FastAPI, following clean architecture principles.
+This project provides a RESTful API facade for accessing video content from the Internet Archive. It's built using **Python** and FastAPI, following clean architecture principles.
 
 ## Features
 
@@ -242,3 +242,10 @@ npm start
 
 ## Video Detailed PopUp
 ![Texto alternativo](https://github.com/tsroliveira/InternetArchiveAPI/blob/master/InternetArchiveAPI/web/public/img/4_Video_Detailed_Popup.png)
+
+
+
+
+All comments and documentation were generated and/or reviewed with the assistance of artificial intelligence (Cloude.ai and GPT-3.5).
+
+
